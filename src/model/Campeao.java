@@ -25,7 +25,9 @@ public class Campeao {
 		return ataque;
 	}
 	
-	
+	public String getNome() {
+		return nome;
+	}
 	public void receberDano(int danoInimigo) {
 		int dano = danoInimigo - this.armadura;
 		if(dano < 1) {
@@ -39,6 +41,13 @@ public class Campeao {
 		}
 	}
 	
+	public void curar(int qtd) {
+		this.vida += qtd;
+	}
+	
+	public void aumentarAtaque(int qtd) {
+		this.ataque += qtd;
+	}
 	
 	public String status() {
 		if(this.vida == 0) {
